@@ -2,17 +2,16 @@ import firebase from "firebase/app"
 import "firebase/firestore"
 import "firebase/auth"
 import "firebase/analytics"
-  
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCCTCTRShn2EDmXbt4BSqestW4v8T_Ysh8",
-  authDomain: "flawleashandbeauty.firebaseapp.com",
-  databaseURL: "https://flawleashandbeauty.firebaseio.com",
-  projectId: "flawleashandbeauty",
-  storageBucket: "flawleashandbeauty.appspot.com",
-  messagingSenderId: "930028769087",
-  appId: "1:930028769087:web:1cd21e812380da94674d8a",
-  measurementId: "G-E39QYSS92V",
+  apiKey: "AIzaSyAEBNIfWgN_bdOK68YpS5AVK3XmN3M895g",
+  authDomain: "moviepicker-46941.firebaseapp.com",
+  projectId: "moviepicker-46941",
+  storageBucket: "moviepicker-46941.appspot.com",
+  messagingSenderId: "884016927571",
+  appId: "1:884016927571:web:03c93087f82e7ccbb9c7a6",
+  measurementId: "G-7PERRV5T97"
 }
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)

@@ -4,11 +4,15 @@ import Dashboard from './pages/Dashboard'
 import AddMovie from './pages/AddMovie'
 import NotFound from './pages/NotFound'
 
-function Routes() {
+const Routes = (props) => {
+  let { movies } = props
   return (
       <Switch>
         <Route path="/dashboard" exact component={Dashboard} />
-        <Route path="/add-movie" component={AddMovie} />
+        <Route path="/add-movie" render={() => (
+            <AddMovie movies={movies} />
+          )}
+        />
         <Route component={NotFound} />
       </Switch>
   )
