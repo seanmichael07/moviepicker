@@ -3,39 +3,23 @@ import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import { Layout } from "antd";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import SideNav from "./components/SideNav/SideNav";
-import Routes from "./routes";
+import MainContent from "./components/MainContent/MainContent";
 
 import "./styles/less/App.less";
-
-const { Content } = Layout;
 
 class App extends Component {
   render() {
     const { movies } = this.props;
     return (
       <Router>
-        <Route
-          render={(props) => (
-            <Layout className="App" style={{ height: "100vh" }}>
-              <SideNav {...props} />
-              <Layout style={{ padding: "0 24px 24px" }}>
-                <Content
-                  style={{
-                    padding: "1% 1%",
-                    minHeight: "90%",
-                    background: "#fff",
-                    marginTop: "1%",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <Routes {...props} movies={movies} />
-                </Content>
-              </Layout>
-            </Layout>
-          )}
-        />
+        <Layout className="App" style={{ height: "100vh" }}>
+          <SideNav />
+          <Layout style={{ padding: "0 24px 24px" }}>
+            <MainContent movies={movies} />
+          </Layout>
+        </Layout>
       </Router>
     );
   }

@@ -1,17 +1,19 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import SidenavItems from "./SideNavItems";
 
 const { Sider } = Layout;
 
 const SideNav = (props) => {
+  const location = useLocation();
   return (
     <Sider width={200}>
       <Menu
         mode="inline"
-        defaultSelectedKeys={[props.location.pathname]}
+        defaultSelectedKeys={[location.pathname]}
+        selectedKeys={[location.pathname]}
         style={{ height: "100%", paddingTop: "5%" }}
       >
         {SidenavItems.map((item) => (
