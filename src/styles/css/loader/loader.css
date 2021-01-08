@@ -15,12 +15,19 @@
   }
 }
 
+#loader-outer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh
+}
+
 #loader circle {
   width: 100%;
   height: 100%;
   fill: none;
   stroke-width: 10;
-  stroke: #00a1ff;
+  stroke: #0da574;
   stroke-linecap: round;
   transform: translate(5px, 5px);
   stroke-dasharray: 440;
