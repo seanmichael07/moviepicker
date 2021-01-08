@@ -32,5 +32,5 @@ const mapStateToProps = (state) => {
 };
 export default compose(
   connect(mapStateToProps),
-  firestoreConnect([{ collection: "movies" }])
+  firestoreConnect([{ collection: "movies", orderBy: "movieName" }])
 )(App);
