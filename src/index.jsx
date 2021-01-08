@@ -19,6 +19,7 @@ import firebaseConfig from "./config/firebase.config";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import Loader from "./components/generic/Loader";
+import "./styles/css/index.css";
 
 require("dotenv").config();
 
