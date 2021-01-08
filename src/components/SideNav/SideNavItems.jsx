@@ -1,4 +1,8 @@
-import { AppstoreOutlined, PlusCircleOutlined } from "@ant-design/icons";
+import {
+  AppstoreOutlined,
+  PlusCircleOutlined,
+  SelectOutlined,
+} from "@ant-design/icons";
 
 const SidenavItems = [
   {
@@ -10,6 +14,11 @@ const SidenavItems = [
     name: "Add Movie(s)",
     icon: <PlusCircleOutlined />,
     route: "/add-movie",
+  },
+  {
+    name: "Select Movie",
+    icon: <SelectOutlined />,
+    route: "/select-movie",
   },
 ];
 
