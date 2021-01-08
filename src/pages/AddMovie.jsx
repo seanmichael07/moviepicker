@@ -6,11 +6,14 @@ import InfiniteScroll from "react-infinite-scroller";
 
 import { createMovie } from "../store/actions/movieActions";
 class AddMovie extends Component {
-  state = {
-    loading: false,
-    hasMore: true,
-    newMovieName: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false,
+      hasMore: true,
+      newMovieName: null,
+    };
+  }
 
   // TODO: Figure out how to make this work with how my data fetching works
   handleInfiniteOnLoad = () => {
